@@ -19,6 +19,7 @@ import { createUserAccount } from "@/lib/appwrite/api"
 
 
 const SignupForm = () => {
+    
     const { toast } = useToast()
     const isLoading = false;
     // 1. Define your form.
