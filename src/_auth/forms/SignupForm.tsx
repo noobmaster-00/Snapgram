@@ -62,7 +62,18 @@ const SignupForm = () => {
                 <p className="text-light-3 small-medium md:base-regular mt-2 ">To use Snapgram, Please enter your detials</p>
 
                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-5 w-full mt-4">
-                   
+                    <FormField
+                        control={form.control}
+                        name="name"
+                        render={({field}) => (
+                        <FormItem>
+                            <FormLabel>Name</FormLabel>
+                            <FormControl>
+                                <Input type="text" className="shad-input" {...field}/>
+                            </FormControl>
+                            <FormMessage/>
+                        </FormItem>
+                    )}/>
                     <FormField
                         control={form.control}
                         name="username"
